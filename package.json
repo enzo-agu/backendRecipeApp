@@ -1,0 +1,40 @@
+{
+  "name": "node-bootcamp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "node-bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzo-agu/Node-bootcamp.git"
+  },
+  "author": "Enzo Agú",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enzo-agu/Node-bootcamp/issues"
+  },
+  "homepage": "https://github.com/enzo-agu/Node-bootcamp#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "express-validator": "^7.0.1",
+    "google-auth-library": "^9.4.1",
+    "hbs": "^4.2.0",
+    "inquirer": "^9.2.12",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1",
+    "yargs": "^17.7.2"
+  }
+}
