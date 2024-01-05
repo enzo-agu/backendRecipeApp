@@ -1,5 +1,5 @@
 import express from "express";
-import { __dirName } from "../utils.js";
+// import { __dirName } from "../utils.js";
 import cors from 'cors'
 import { router } from "../routes/user.js";
 import { dbConnection } from "../db/configMongoose.js";
