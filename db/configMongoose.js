@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const dbConnection = async () => {
   try {
 
-    await mongoose.connect(process.env.MONGODBCNN, {
+    await mongoose.connect('mongodb+srv://userNode:bgYn4ra35M9wJo5P@cluster0.v0gbygu.mongodb.net/recipeDB', {
 
     })
 

@@ -1,16 +1,12 @@
 import { check } from "express-validator";
-// import { body } from "express-validator";
 import { Router } from "express";
-// import { googleSignIn, login } from "../controllers/auth.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { crearProducto,
     obtenerProductos,
-    // obtenerProducto,
     actualizarProducto,
     borrarProducto } from "../controllers/productos.js";
 import { existeProductoPorId } from "../helpers/db-validators.js";
-import { esAdminRole } from "../middlewares/validar-roles.js";
 
 const routerProducts = Router();
 
@@ -37,7 +33,7 @@ routerProducts.put(
   actualizarProducto
 );
 
-// BORRAR CATEGORIA-ADMIN
+// BORRAR PRODUCTO-ADMIN
 routerProducts.delete(
   "/:id",
   [

@@ -6,24 +6,20 @@ import { router } from "../routes/user.js";
 import { dbConnection } from "../db/configMongoose.js";
 import { routerAuth } from "../routes/auth.js";
 import { routerProducts } from "../routes/productos.js";
-import { routerUpload } from "../routes/uploads.js";
 import fileUpload from "express-fileupload";
 
 dotenv.config({ path: "../.env" });
 
-
-
 class Server {
   constructor() {
     this.app = express();
-    this.port = process.env.PORT_0;
+    this.port = 8080;
     this.usuariosPath='/api/usuarios'
     this.authPath='/api/auth';
     this.productos='/api/productos'
     this.categorias='/api/categorias'
     this.buscar='/api/buscar'
     this.uploads='/api/uploads'
-
 
     this.conectarDB()
 
@@ -53,7 +49,6 @@ class Server {
     this.app.use(this.authPath, routerAuth)
     this.app.use(this.usuariosPath, router)
     this.app.use(this.productos, routerProducts)
-    this.app.use(this.uploads, routerUpload)
 
   }
 

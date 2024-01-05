@@ -1,4 +1,3 @@
-import  jwt from 'jsonwebtoken';
 import { response } from "express";
 import Producto from "../models/producto.js";
 
@@ -16,17 +15,6 @@ const obtenerProductos = async (req, res = response) => {
     msg:'RUTA-PRODUCTOS'
   });
 };
-
-// PRODUCTO SOLO 👇
-// const obtenerProducto = async (req, res = response) => {
-//   const { id } = req.params;
-//   const producto = await Producto.findById(id)
-//     .populate("usuario", "nombre")
-//     .populate("categoria", "nombre");
-
-//   res.json(producto);
-// };
-
 
 // CREAR RECETA 👇
 const crearProducto = async (req, res = response) => {
@@ -85,7 +73,6 @@ const borrarProducto = async (req, res = response) => {
 export {
   crearProducto,
   obtenerProductos,
-  // obtenerProducto,
   actualizarProducto,
   borrarProducto,
 };

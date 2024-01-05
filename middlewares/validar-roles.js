@@ -37,9 +37,6 @@ const tieneRole = (...roles) => {
                 msg:`El servicio requiere uno de estos roles ${roles}`
             })
           }
-
-
-
         next()
     }
 };

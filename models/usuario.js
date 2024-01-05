@@ -1,10 +1,6 @@
 import { Schema, model } from "mongoose";
 
 const UsuarioSchema=Schema({
-    // nombre:{
-    //     type:String, 
-    //     required: [true, 'El nombre es obligatiorio']
-    // },
     email:{
         type:String, 
         required: [true, 'El email es obligatiorio'],
@@ -19,7 +15,6 @@ const UsuarioSchema=Schema({
     },
     rol:{
         type:String, 
-        // required: true,
         default:'USER_ROLE',
         emun:['ADMIN_ROLE', 'USER_ROLE']
     },
@@ -32,12 +27,6 @@ const UsuarioSchema=Schema({
         default: false 
     },
 })
-
-// UsuarioSchema.methods.toJSON = function () {
-//     const {__v, password,_id, ...usuario} =this.toObject()
-//     usuario.uid=_id
-//     return usuario
-// }
 
 export default model('Usuario', UsuarioSchema)
 

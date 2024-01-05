@@ -9,15 +9,14 @@
     "start": "node index"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/enzo-agu/Node-bootcamp.git"
+    "type": "git"
   },
   "author": "Enzo Agú",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enzo-agu/Node-bootcamp/issues"
+    
   },
-  "homepage": "https://github.com/enzo-agu/Node-bootcamp#readme",
+  
   "dependencies": {
     "axios": "^1.6.2",
     "bcryptjs": "^2.4.3",
