@@ -1,5 +1,4 @@
 import express from "express";
-import dotenv from "dotenv";
 import { __dirName } from "../utils.js";
 import cors from 'cors'
 import { router } from "../routes/user.js";
@@ -8,12 +7,13 @@ import { routerAuth } from "../routes/auth.js";
 import { routerProducts } from "../routes/productos.js";
 import fileUpload from "express-fileupload";
 
-dotenv.config({ path: "../.env" });
+// import dotenv from "dotenv";
+// dotenv.config({ path: "../.env" });
 
 class Server {
   constructor() {
     this.app = express();
-    this.port = 8080;
+    this.port = process.env.PORT_0;
     this.usuariosPath='/api/usuarios'
     this.authPath='/api/auth';
     this.productos='/api/productos'

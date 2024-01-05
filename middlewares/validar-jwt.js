@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
-import dotenv from "dotenv";
 import Usuario from '../models/usuario.js';
 
+import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 
 const validarJWT = async (req= request,res=response, next) =>{
@@ -15,7 +15,7 @@ const validarJWT = async (req= request,res=response, next) =>{
     }
 
     try {
-       const {uid}= jwt.verify(token, 'Est03sMyPub1cK3y23@914')
+       const {uid}= jwt.verify(token, process.env.SECRETORPRIVATEKEY)
 
        const usuario = await Usuario.findById(uid)
 

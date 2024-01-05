@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
+// import dotenv from "dotenv";
+// dotenv.config({ path: "./.env" });
 
 const dbConnection = async () => {
   try {
 
-    await mongoose.connect('mongodb+srv://userNode:bgYn4ra35M9wJo5P@cluster0.v0gbygu.mongodb.net/recipeDB', {
+    await mongoose.connect(process.env.MONGODB_CNN, {
 
     })
 

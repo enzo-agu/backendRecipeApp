@@ -1,5 +1,5 @@
 import  jwt from 'jsonwebtoken'
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 // dotenv.config({ path: "./.env" });
 
 const generarJWT = (uid = '') =>{
@@ -7,7 +7,7 @@ const generarJWT = (uid = '') =>{
 
         const payload= {uid}
 
-        jwt.sign(payload, 'Est03sMyPub1cK3y23@914', {
+        jwt.sign(payload, process.env.SECRETORPRIVATEKEY, {
             expiresIn:'4h'
         }, (err,token)=>{
             if(err){
