@@ -32,6 +32,10 @@ class Server {
     await dbConnection();
   }
 
+  getApp(){
+    return this.app
+  }
+
   middlewares() {
 
     this.app.use(cors());
