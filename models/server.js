@@ -13,7 +13,7 @@ import fileUpload from "express-fileupload";
 class Server {
   constructor() {
     this.app = express();
-    this.port = process.env.PORT_0;
+    this.port = process.env.PORT || 3000;
     this.usuariosPath='/api/usuarios'
     this.authPath='/api/auth';
     this.productos='/api/productos'
